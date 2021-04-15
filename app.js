@@ -129,7 +129,7 @@ app.get('/registration',(req,res) => {
 });
 
 
-//restaurant/id route Api
+//registration/id route Api
 app.get('/restaurant/:id',(req,res) => {
     var id=req.params.id;
     //console.log(id);
