@@ -130,7 +130,7 @@ app.get('/registration',(req,res) => {
 
 
 //registration/id route Api
-app.get('/restaurant/:id',(req,res) => {
+app.get('/registration/:id',(req,res) => {
     var id=req.params.id;
     //console.log(id);
     db.collection('registration').find({_id:id}).toArray((err,result) =>{
