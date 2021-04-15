@@ -129,6 +129,15 @@ app.get('/registration',(req,res) => {
 });
 
 
+//restaurant/id route Api
+app.get('/restaurant/:id',(req,res) => {
+    var id=req.params.id;
+    //console.log(id);
+    db.collection('registration').find({_id:id}).toArray((err,result) =>{
+    if (err) throw err;
+    res.send(result);  
+    })
+});
 
 //get all bookings
 /*app.get('/orders',(req,res) => {
