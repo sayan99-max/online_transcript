@@ -110,7 +110,7 @@ app.get('/restaurant/:id',(req,res) => {
 
 
     //place registration
-     app.post('/registration',(req,res) => {
+     app.post('/placeregistration',(req,res) => {
       db.collection('registration').insert(req.body,(err,result) =>{
         if (err) console.log(err);
         res.status(200).send('Data Added');  
