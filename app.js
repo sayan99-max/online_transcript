@@ -144,8 +144,8 @@ app.get('/registration',(req,res) => {
     var condition={}; 
 
         //get registration/id    
-             if (req.query._id) {
-             condition={_id:req.query._id};
+             if (req.query.id) {
+             condition={_id:req.query.id};
              
          }
        db.collection('registration').find(condition).toArray((err,result) =>{
