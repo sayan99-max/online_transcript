@@ -139,6 +139,24 @@ app.get('/registration/:id',(req,res) => {
     })
 });
 
+
+app.get('/registration',(req,res) => {
+    var condition={}; 
+
+        //get registration/id    
+             if (req.query._id) {
+             condition={_id:req.query._id};
+             
+         }
+       db.collection('registration').find(condition).toArray((err,result) =>{
+         if (err) throw err;
+         console.log(result)
+         res.send(result)  
+         })
+});
+
+
+
 //get all bookings
 /*app.get('/orders',(req,res) => {
     db.collection('orders').find().toArray((err,result) =>{
