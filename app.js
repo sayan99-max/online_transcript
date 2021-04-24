@@ -144,7 +144,7 @@ app.get('/registration/:id',(req,res) => {
 app.get('/registration/:branch',(req,res) => {
     var branch=req.params.branch;
     //console.log(id);
-    db.collection('registration').find({branch:branch}).toArray((err,result) =>{
+    db.collection('registration').find({"branch":branch}).toArray((err,result) =>{
     if (err) throw err;
     res.send(result);  
     })
