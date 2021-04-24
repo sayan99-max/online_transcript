@@ -141,10 +141,10 @@ app.get('/registration/:id',(req,res) => {
 
 
 //registration/branch route Api
-app.get('/registration/:branch',(req,res) => {
-    var branch=req.params.branch;
+app.get('/registration/:br',(req,res) => {
+    var br=req.params.br;
     //console.log(id);
-    db.collection('registration').find({"branch":branch}).toArray((err,result) =>{
+    db.collection('registration').find({"branch":br}).toArray((err,result) =>{
     if (err) throw err;
     res.send(result);  
     })
