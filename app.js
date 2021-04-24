@@ -151,7 +151,7 @@ app.get('/regis/:br',(req,res) => {
 });
 
 
-app.get('/regis',(req,res) => {
+/*app.get('/regis',(req,res) => {
     var condition={}; 
 
         //get registration/id    
@@ -164,7 +164,7 @@ app.get('/regis',(req,res) => {
          console.log(result)
          res.send(result)  
          })
-});
+});*/
 
 
 
