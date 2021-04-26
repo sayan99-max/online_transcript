@@ -174,6 +174,30 @@ app.get('/transcript/:id',(req,res) => {
 
 
 
+//branch route Api
+app.get('/branch',(req,res) => {
+             
+    db.collection('branch').find().toArray((err,result) =>{
+     if (err) throw err;
+     console.log(result)
+     res.send(result);  
+ })
+});
+
+
+//transcript/id route Api
+app.get('/transcript/:id',(req,res) => {
+    var id=req.params.id;
+    //console.log(id);
+    db.collection('branch').find({_id:id}).toArray((err,result) =>{
+    if (err) throw err;
+    res.send(result);  
+    })
+});
+
+
+
+
 
 //get all bookings
 /*app.get('/orders',(req,res) => {
