@@ -185,8 +185,8 @@ app.get('/branch',(req,res) => {
 });
 
 
-//transcript/id route Api
-app.get('/transcript/:id',(req,res) => {
+//branch/id route Api
+app.get('/branch/:id',(req,res) => {
     var id=req.params.id;
     //console.log(id);
     db.collection('branch').find({_id:id}).toArray((err,result) =>{
